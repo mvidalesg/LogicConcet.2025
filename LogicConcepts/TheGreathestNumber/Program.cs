@@ -7,8 +7,8 @@ do
 {
     Console.WriteLine("ingrese 3 numeros diferentes");
     var a = ConsoleExtension.GetInt("Ingrese primer numero : ");
-    var a = ConsoleExtension.GetInt("Ingrese segundo numero : ");
-    var a = ConsoleExtension.GetInt("Ingrese tercer numero : ");
+    var b = ConsoleExtension.GetInt("Ingrese segundo numero : ");
+    var c = ConsoleExtension.GetInt("Ingrese tercer numero : ");
 
     if (a > b && a > c)
     {
