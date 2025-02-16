@@ -20,6 +20,7 @@ do
     }
     else
     {
+
         Console.WriteLine($"El numero mayor es: {c}");
     }
     do
