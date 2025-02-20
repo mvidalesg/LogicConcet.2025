@@ -1,46 +1,27 @@
-﻿using Shared ///
-
-using System.ComponentModel.Design;
+﻿using Shared;
 
 do
 {
     var currentYear = DateTime.Now.Year;
     var message = string.Empty;
-    var year = ConsoleExtension.GetInt("ingrese año: ");
+    var year = ConsoleExtension.GetInt("Ingrese año: ");
 
     if (year == currentYear)
     {
         message = "es";
-    } else (year > currentYear)
+    }
+    else if (year > currentYear) // Corregido: else if en lugar de else (year > currentYear)
     {
-        message = "va a ser";   
+        message = "va a ser";
     }
     else
     {
         message = "fue";
     }
 
+    // Calculo de año bisiesto simplificado y más legible
+    bool esBisiesto = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
- if (year % 4 == 0)
-    {
-        if (year % 100 == 0)
-        {
-            if (year % 400 == 0)
-            {
-                Console.WriteLine($"El año : {year}, Si {message} biciestos.");
-            }
-            else
-            {
-                Console.WriteLine($"El año : {year}, No {message} biciestos.");
-            }
-        }
-        else
-        {
-            Console.WriteLine($"El año : {year}, Si {message} biciestos.");
-        }
-    }
-    else
-    {
-        Console.WriteLine($"El año : {year}, No {message} biciestos.");
-    }
+    Console.WriteLine($"El año: {year}, {(esBisiesto ? "Si" : "No")} {message} bisiesto."); // Uso de operador ternario
+
 } while (true);
