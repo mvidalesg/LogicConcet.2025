@@ -31,6 +31,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{F08B89
 		Shared\Shared.csproj = Shared\Shared.csproj
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06", "06", "{226604A4-BFD9-46D7-B55D-6379739B5E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePayroll", "SimplePayroll\SimplePayroll.csproj", "{76A49FB4-66C7-420A-BBE0-4518667AE7B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{197881C9-BE26-4802-A5EA-914536FA0463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197881C9-BE26-4802-A5EA-914536FA0463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{197881C9-BE26-4802-A5EA-914536FA0463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A49FB4-66C7-420A-BBE0-4518667AE7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A49FB4-66C7-420A-BBE0-4518667AE7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A49FB4-66C7-420A-BBE0-4518667AE7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A49FB4-66C7-420A-BBE0-4518667AE7B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,7 @@ Global
 		{F32ED487-D575-4E54-8B1B-879C22B9347D} = {BD798AC7-A35F-4B02-9E3D-482638719405}
 		{4F3708F5-02D8-4465-A02B-DFAA1C88310A} = {59B3CDA2-4959-4C76-9DAF-814B2BCD790A}
 		{197881C9-BE26-4802-A5EA-914536FA0463} = {4D37BAE7-3590-434F-885C-69CDA9D42B68}
+		{76A49FB4-66C7-420A-BBE0-4518667AE7B7} = {226604A4-BFD9-46D7-B55D-6379739B5E51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6468016C-5877-48E7-9CE9-3F722284082C}
