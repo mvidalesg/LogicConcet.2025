@@ -17,7 +17,7 @@ public class Date
     {
         _year = year;
         _month = ValidateMonth(month);
-        _day = day;
+        _day = ValidateDay(day);
     }
     public int Day 
     {
