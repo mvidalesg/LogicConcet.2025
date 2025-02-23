@@ -9,7 +9,7 @@ public class Time /// atributos privados/ campos
     private int _millisecond;
     private int _minute;
     private int _second;
-    
+
 
     public Time() // constructor sin parametros
     {
@@ -124,7 +124,7 @@ public class Time /// atributos privados/ campos
         {
             throw new ArgumentOutOfRangeException(nameof(hour), $" the hour:{hour}, Hour must be between 0 and 23");
         }
-      
+
     }
 
     private void ValidateMinute(int minute)
@@ -134,8 +134,8 @@ public class Time /// atributos privados/ campos
             throw new ArgumentOutOfRangeException(nameof(minute), $" the minute {minute}, Minute must be between 0 and 59.");
         }
     }
-        
-    
+
+
 
     private void ValidateSecond(int second)
     {
@@ -143,7 +143,7 @@ public class Time /// atributos privados/ campos
         {
             throw new ArgumentOutOfRangeException(nameof(second), $" the second {second}, second must be between 0 and 59.");
         }
-        
+
     }
     private void ValidateMillisecond(int millisecond)
     {
@@ -166,7 +166,7 @@ public class Time /// atributos privados/ campos
         }
         catch (ArgumentOutOfRangeException)
         {
-            return 0; // Retorna 0 si la hora no es válida
+            return 0;
         }
     }
 
@@ -183,7 +183,7 @@ public class Time /// atributos privados/ campos
         }
         catch (ArgumentOutOfRangeException)
         {
-            return 0; // Retorna 0 si la hora no es válida
+            return 0;
         }
     }
 
@@ -199,16 +199,15 @@ public class Time /// atributos privados/ campos
         }
         catch (ArgumentOutOfRangeException)
         {
-            return 0; // Retorna 0 si la hora no es válida
+            return 0;
         }
     }
-
     public bool IsOtherDay(Time otherTime)
     {
         long totalMillisecondsThis = ToMilliseconds();
         long totalMillisecondsOther = otherTime.ToMilliseconds();
 
-        return (totalMillisecondsThis + totalMillisecondsOther) >= 86400000; // 86400000 milisegundos en un día
+        return (totalMillisecondsThis + totalMillisecondsOther) >= 86400000;
     }
 
     public Time Add(Time otherTime)
@@ -225,4 +224,8 @@ public class Time /// atributos privados/ campos
         return new Time((int)newHour, (int)newMinute, (int)newSecond, (int)newMillisecond);
     }
 }
+
+
+
+
 
