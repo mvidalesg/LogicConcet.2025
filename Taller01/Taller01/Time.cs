@@ -122,7 +122,7 @@ public class Time /// atributos privados/ campos
     {
         if (hour < 0 || hour > 23)
         {
-            throw new ArgumentOutOfRangeException(nameof(hour), $" the hour:{hour}, Hour must be between 0 and 23");
+            throw new ArgumentOutOfRangeException(nameof(hour), $" the hour:{hour}, Hour is not valid");
         }
 
     }
@@ -152,7 +152,7 @@ public class Time /// atributos privados/ campos
             throw new ArgumentOutOfRangeException(nameof(millisecond), $" the millisecond {millisecond}, Millisecond must be between 0 and 999.");
         }
     }
-    public long ToMilliseconds()
+    public long ToMilliseconds() /// metodo que covierte el tiempo en sus respectivas unidades 
     {
         try
         {
@@ -170,7 +170,7 @@ public class Time /// atributos privados/ campos
         }
     }
 
-    public long ToSeconds()
+    public long ToSeconds() /// metodo que covierte el tiempo en sus respectivas unidades 
     {
         try
         {
@@ -187,7 +187,7 @@ public class Time /// atributos privados/ campos
         }
     }
 
-    public long ToMinutes()
+    public long ToMinutes() /// metodo que covierte el tiempo en sus respectivas unidades 
     {
         try
         {
@@ -202,7 +202,7 @@ public class Time /// atributos privados/ campos
             return 0;
         }
     }
-    public bool IsOtherDay(Time otherTime)
+    public bool IsOtherDay(Time otherTime)  /// metodo ralizan operaciones logicas entre objetos Time
     {
         long totalMillisecondsThis = ToMilliseconds();
         long totalMillisecondsOther = otherTime.ToMilliseconds();
@@ -210,7 +210,7 @@ public class Time /// atributos privados/ campos
         return (totalMillisecondsThis + totalMillisecondsOther) >= 86400000;
     }
 
-    public Time Add(Time otherTime)
+    public Time Add(Time otherTime)   /// metodo ralizan operaciones logicas entre objetos Time
     {
         long totalMillisecondsThis = ToMilliseconds();
         long totalMillisecondsOther = otherTime.ToMilliseconds();
