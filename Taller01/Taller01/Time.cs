@@ -161,7 +161,7 @@ public class Time /// atributos privados/ campos
             ValidateSecond(_second);
             ValidateMillisecond(_millisecond);
 
-            long totalMilliseconds = (_hour * 3600000L) + (_minute * 60000L) + (_second * 1000L) + _millisecond;
+            long totalMilliseconds = (_hour * 3600000L) + (_minute * 60000L) + (_second * 1000L) + _millisecond; // horas a milise// minut a milli etc
             return totalMilliseconds;
         }
         catch (ArgumentOutOfRangeException)
@@ -178,7 +178,7 @@ public class Time /// atributos privados/ campos
             ValidateMinute(_minute);
             ValidateSecond(_second);
 
-            long totalSeconds = (_hour * 3600L) + (_minute * 60L) + _second;
+            long totalSeconds = (_hour * 3600L) + (_minute * 60L) + _second; // horas a segundos // minutos a segundos 
             return totalSeconds;
         }
         catch (ArgumentOutOfRangeException)
@@ -194,7 +194,7 @@ public class Time /// atributos privados/ campos
             ValidateHour(_hour);
             ValidateMinute(_minute);
 
-            long totalMinutes = (_hour * 60L) + _minute;
+            long totalMinutes = (_hour * 60L) + _minute;   // hora a minuto 
             return totalMinutes;
         }
         catch (ArgumentOutOfRangeException)
@@ -202,7 +202,7 @@ public class Time /// atributos privados/ campos
             return 0;
         }
     }
-    public bool IsOtherDay(Time otherTime)  /// metodo ralizan operaciones logicas entre objetos Time
+    public bool IsOtherDay(Time otherTime)  /// metodo determina el cambio de dia 
     {
         long totalMillisecondsThis = ToMilliseconds();
         long totalMillisecondsOther = otherTime.ToMilliseconds();
@@ -210,7 +210,7 @@ public class Time /// atributos privados/ campos
         return (totalMillisecondsThis + totalMillisecondsOther) >= 86400000;
     }
 
-    public Time Add(Time otherTime)   /// metodo ralizan operaciones logicas entre objetos Time
+    public Time Add(Time otherTime)   /// metodo calcula nuevas unidades de tiempo 
     {
         long totalMillisecondsThis = ToMilliseconds();
         long totalMillisecondsOther = otherTime.ToMilliseconds();
