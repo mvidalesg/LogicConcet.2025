@@ -15,7 +15,7 @@
         public int Id { get; set; }
         public string FirsName { get; set; } = null!;
         public string LastName { get; set; } = null!;
-        private bool IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         public Date? BornDate { get; set; }
         public Date? HireDate { get; set; }
