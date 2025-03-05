@@ -24,7 +24,7 @@ public class HourlyEmployee : Employee
         return $"{base.ToString()}\n\t" +
             $"Working hours..:   {WorkingHours,20:N2}\n\t" +
             $"Working value.....:{ValueHour,20:C2}\n\t" +
-            $"Working hours...:  {GetValueToPay(),20:C2}";
+            $"value to pay...:  {GetValueToPay(),20:C2}";
     }
 
 

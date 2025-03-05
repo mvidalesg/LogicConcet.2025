@@ -6,7 +6,7 @@
 
         public SalaryEmployee(int id, string firsName, string lastName, bool isActive, Date? bornDate, Date? hireDate, decimal salary) : base(id, firsName, lastName, isActive, bornDate, hireDate)
         {
-            _salary = salary;
+            _salary = ValidateSalary(salary); // valida el salario en este cosntructor
         }
 
         public decimal Salary { get => _salary; set => _salary = ValidateSalary(value); } // propiedad 
